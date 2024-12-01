@@ -34,9 +34,11 @@ inputForm.addEventListener("submit", async (e) => {
                 }
             }
         } else {
+            alert("Error: " + result.error)
             console.error("Error:", result.error);
         }
     } catch (error) {
+        alert("Fetch failed: " + error)
         console.error("Fetch failed:", error);
     }
 });
