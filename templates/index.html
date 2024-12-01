@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smoll Url</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=rethink-sans:400&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <meta content="Smoll Url" property="og:title">
+    <meta content="Simple url shortener" property="og:description">
+    <meta name="theme-color" content="#bb86fc">
+</head>
+<body>
+    <div class="container solid">
+        <h1>Smoll Url</h1>
+        <h2>Simple URL Shortener</h2>
+        <form id="inputForm">
+            <input id="urlInput" placeholder="https://example.com" type="text" required>
+            <button id="urlSubmit" type="submit">Shorten URL</button>
+        </form>
+        <div id="generatedUrlContainer" style="display: none;">
+            <h3>Generated URL:</h3>
+            <input id="generatedUrl" type="text" readonly>
+            <button id="copyButton">Copy to Clipboard</button>
+        </div>
+        <p class="footer-text">Enter a URL to shorten it and share it easily!</p>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>
